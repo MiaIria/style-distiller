@@ -1,0 +1,9 @@
+# 用户个人风格数据 — 绝不入版本控制
+styles/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
