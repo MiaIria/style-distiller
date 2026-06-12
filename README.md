@@ -39,27 +39,94 @@
 - 已安装 [Claude Code](https://claude.ai/code)（CLI 或 VS Code / JetBrains 扩展）
 - Git
 
+> Claude Code 的 skills 目录默认为 `~/.claude/skills/`，以下命令均按此路径。如果你自定义了 skills 路径，请替换为你的实际路径。
+
 ### 方法一：Git Clone（推荐）
 
+<details open>
+<summary><b>macOS / Linux</b></summary>
+
 ```bash
-# 克隆到 Claude Code 的 skills 目录
 git clone https://github.com/MiaIria/style-distiller.git ~/.claude/skills/
 ```
 
-### 方法二：手动下载
+</details>
 
-1. 下载本仓库 ZIP 并解压
-2. 将 6 个 `style-*` 目录复制到 `~/.claude/skills/`
+<details>
+<summary><b>Windows</b></summary>
+
+**Git Bash：**
 
 ```bash
-cp -r style-feed style-write style-reject style-feedback style-review style-lib ~/.claude/skills/
+git clone https://github.com/MiaIria/style-distiller.git ~/.claude/skills/
 ```
 
+**PowerShell：**
+
+```powershell
+git clone https://github.com/MiaIria/style-distiller.git $env:USERPROFILE\.claude\skills\
+```
+
+</details>
+
+### 方法二：手动下载
+
+1. 下载本仓库 [ZIP](https://github.com/MiaIria/style-distiller/archive/refs/heads/main.zip) 并解压
+2. 将解压后文件夹内的 6 个 `style-*` 目录复制到 Claude Code 的 skills 目录
+
+<details open>
+<summary><b>macOS / Linux</b></summary>
+
+```bash
+# 假设解压到了 ~/Downloads/style-distiller/
+cp -r ~/Downloads/style-distiller/style-* ~/.claude/skills/
+```
+
+</details>
+
+<details>
+<summary><b>Windows</b></summary>
+
+**PowerShell：**
+
+```powershell
+# 假设解压到了 C:\Users\<你的用户名>\Downloads\style-distiller\
+Copy-Item -Recurse $env:USERPROFILE\Downloads\style-distiller\style-* $env:USERPROFILE\.claude\skills\
+```
+
+**文件资源管理器：**
+
+直接将 6 个 `style-*` 文件夹拖入 `C:\Users\<你的用户名>\.claude\skills\` 即可。
+
+</details>
+
 ### 创建数据目录
+
+<details open>
+<summary><b>macOS / Linux</b></summary>
 
 ```bash
 mkdir -p ~/.claude/styles/
 ```
+
+</details>
+
+<details>
+<summary><b>Windows</b></summary>
+
+**PowerShell / CMD：**
+
+```powershell
+# PowerShell
+New-Item -ItemType Directory -Force -Path $env:USERPROFILE\.claude\styles
+```
+
+```cmd
+:: CMD
+mkdir %USERPROFILE%\.claude\styles
+```
+
+</details>
 
 > 💡 数据目录在首次使用 `/style-feed` 或 `/style-write` 时会自动初始化，也可手动创建。
 
