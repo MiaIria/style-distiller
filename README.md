@@ -227,6 +227,17 @@ style-distiller/
 ├── style-reject/SKILL.md            ← /style-reject 入口
 ├── style-feedback/SKILL.md          ← /style-feedback 入口
 ├── style-review/SKILL.md            ← /style-review 入口
+├── references/                      ← 方法论说明（面试/维护用）
+│   ├── action-level-extraction.md
+│   ├── quality-guardrails.md
+│   ├── retrieval-strategy.md
+│   ├── verification-rubric.md
+│   └── feedback-loop.md
+├── scripts/                         ← 确定性辅助脚本
+│   ├── profile_stats.py             ← 统计档案状态
+│   ├── retrieve_samples.py          ← 按主题/维度/时间召回样本
+│   ├── verify_draft.py              ← 检查草稿禁用词和长度
+│   └── export_profile.py            ← 导出风格档案
 └── style-lib/                       ← 共享库（内部引用，不暴露在 / 菜单）
     ├── SKILL.md
     ├── README.md                    ← 完整使用说明
@@ -253,6 +264,19 @@ style-distiller/
 ├── drafts/                          ← AI 生成的草稿
 └── backups/                         ← 最近 5 个档案备份
 ```
+
+### scripts/ 的定位
+
+`scripts/` 不替代 `style-lib/prompts/` 的核心流程，只把重复、可检查的步骤脚本化：
+
+- `/style-review` 前可运行 `profile_stats.py` 快速查看档案状态
+- `/style-write` 前可运行 `retrieve_samples.py` 辅助选择相关样本
+- 草稿生成后可运行 `verify_draft.py` 做基础违规扫描
+- 需要展示或备份档案时可运行 `export_profile.py`
+
+### references/ 的定位
+
+`references/` 不是运行时 prompt，而是对设计方法论的拆解：动作级提取、样本检索、质量护栏、生成验证和反馈闭环。它适合用于维护、复盘和面试展示。
 
 ---
 

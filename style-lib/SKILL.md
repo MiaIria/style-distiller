@@ -30,6 +30,17 @@ allowed-tools: Read
     └── cold_start.md            冷启动引导
 ```
 
+## 可选辅助脚本
+
+作品集版本包含 `scripts/` 目录，用于把确定性检查脚本化：
+
+- `scripts/profile_stats.py`：统计本地风格档案状态
+- `scripts/retrieve_samples.py`：按主题、维度、时间召回样本
+- `scripts/verify_draft.py`：对草稿做基础质量检查
+- `scripts/export_profile.py`：导出档案便于审视或备份
+
+这些脚本是辅助工具；主流程仍以 `prompts/` 中的步骤为准。
+
 ---
 
 ## 数据存储位置
