@@ -12,9 +12,9 @@
 
 你可能遇到过这些问题：
 
-- 让 AI "帮我写一篇小红书" → 写出来是模板味儿
-- 让 AI "用我的风格写" → 它根本不认识你
-- 选"小红书体"/"知乎体"模板 → 你不想变成一个模板
+- 网上刷到一篇感触很深的文章，第一反应是“我也想写这样文章” → 奈何文笔不够
+- 想着让 AI 写吧 → 写出来一股 AI 味
+- 让 AI "仿照我的风格去写" → 结果它根本不懂你
 
 **Style Distiller 不替你写，它学你怎么写。**
 
@@ -69,11 +69,13 @@ New-Item -ItemType SymbolicLink -Path "$env:USERPROFILE\.claude\skills\style-dis
 └── backups/                         ← 自动备份
 ```
 
-> ⭐ **v2 新增使用建议**：创建以下文件夹用于作品管理和skill自进化 
-`style-write/results/初版/`用于存放写出来的初始版本 
-`style-write/results/终版/`用于存放你修改后的最终版本
-`style-write/difference/` 用于存放每次初版vs终版的区别，作为你的个人细节偏好。
-当/results中出现与初版相同标题的“终版”文件时，skill会检测并主动询问用户是否需要比较差异
+> ⭐ **v2 新增使用建议**：创建以下文件夹用于作品管理和 skill 自进化
+>
+> - **`style-write/results/初版/`** — 用于存放写出来的初始版本
+> - **`style-write/results/终版/`** — 用于存放你修改后的最终版本
+> - **`style-write/difference/`** — 用于存放每次初版 vs 终版的区别，作为你的个人细节偏好
+>
+> **📌 自动检测**：当 `/results/` 中出现与初版相同标题的"终版"文件时，skill 会检测并主动询问用户是否需要比较差异
 
 ### 验证安装
 
