@@ -67,7 +67,7 @@ Read ~/.claude/skills/style-distiller/style-lib/prompts/feedback.md
 请告诉我 4 件事：
 
 1️⃣ 草稿（必填）
-   - 草稿 ID（如 drafts/2026-06-02_001_xxx.md）
+   - 草稿 ID（如 results/初版/result-{MMDD}_xxx-初版.md）
    - 或简单说"最近那篇"
 
 2️⃣ 评分（必填）

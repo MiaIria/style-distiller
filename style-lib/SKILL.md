@@ -41,7 +41,7 @@ allowed-tools: Read
 ├── profile/                     8 份风格画像
 ├── samples/positive/
 ├── samples/negative/
-├── drafts/
+├── drafts/  ← ⚠️ 已废弃（AI 草稿改用 style-write/results/初版/）
 └── backups/
 ```
 

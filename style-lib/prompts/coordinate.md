@@ -13,7 +13,7 @@
 - weights.json（状态机）
 - profile/*.md（8 份画像）
 - samples/positive/ + samples/negative/（样本库）
-- drafts/（草稿）
+- drafts/（草稿）← ⚠️ 已废弃，AI 草稿统一存 style-write/results/初版/
 - history.md（进化日志）
 
 **任何 skill 的写入都会被其他 4 个读取**——数据天然同步。
@@ -103,7 +103,7 @@
 4. Read 选中的 3-5 个样本
 5. 组装风格 prompt
 6. 生成草稿
-7. Write 草稿到 `drafts/{date}_{N}_{slug}.md`
+7. Write 草稿到 `results/初版/result-{MMDD}_{中文标题}-初版.md`
 
 **条件触发**：
 
@@ -299,7 +299,7 @@
        └──────────┴──────────┘
                   │
                   ▼
-           你的文章（drafts/）
+           你的文章（results/初版 + results/终版）
 ```
 
 **任何齿轮不转，其他齿轮都受影响**。所以每个 skill 执行时必须**先想"我要不要触发其他齿轮"**。

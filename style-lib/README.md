@@ -85,7 +85,7 @@
 ├── samples/
 │   ├── positive/                   ← 你喜欢的文章
 │   └── negative/                   ← 你反感的文章
-├── drafts/                         ← AI 生成的草稿
+├── drafts/  ← ⚠️ 已废弃（AI 草稿改用 style-write/results/初版/）
 ├── backups/                        ← 最近 5 个档案备份
 ├── weights.json                    ← 维度权重 + 时间衰减
 └── history.md                      ← 进化日志

@@ -20,7 +20,6 @@ test -d ~/.claude/styles && test -f ~/.claude/styles/weights.json
 mkdir -p ~/.claude/styles/samples/positive
 mkdir -p ~/.claude/styles/samples/negative
 mkdir -p ~/.claude/styles/profile
-mkdir -p ~/.claude/styles/drafts
 mkdir -p ~/.claude/styles/backups
 ```
 
@@ -86,6 +85,5 @@ mkdir -p ~/.claude/styles/backups
 ├── samples/
 │   ├── positive/      (空)
 │   └── negative/      (空)
-├── drafts/            (空)
 └── backups/           (空)
 ```

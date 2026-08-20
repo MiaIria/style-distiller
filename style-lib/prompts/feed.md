@@ -86,17 +86,17 @@
 
 ### Step 3：生成样本文件
 
-文件名格式：`{YYYY-MM-DD}_{NNN}_{slug}.md`
-- NNN = 3 位序号（按时间顺序）
-- slug = 用户备注的前 10 个字（去标点、英文小写、连字符分隔）
+文件名格式：`sample-{MMDD}_{slug}.md`
+- `{MMDD}` = 生成当日日期，月日各补零（`date +%m%d`）
+- slug = 用户备注的前 10 个字（去标点、保留中文）
 
-示例：`2026-06-02_001_开头反问钉住我.md`
+示例：`sample-0602_开头反问钉住我.md`
 
-用 `Write` 写入 `~/.claude/styles/samples/positive/2026-06-02_001_开头反问钉住我.md`：
+用 `Write` 写入 `~/.claude/styles/samples/positive/sample-0602_开头反问钉住我.md`：
 
 ```markdown
 ---
-id: 2026-06-02_001
+id: sample-0602
 source: 抖音/公众号/我自己的/...
 fed_at: 2026-06-02
 dimensions: [hook]
@@ -205,7 +205,7 @@ remark: "开头那个反问直接把我钉住了"
 ```
 ✅ 样本已吸收！
 
-📝 ID：2026-06-02_001
+📝 ID：sample-0602
 📂 入库：samples/positive/
 🎯 维度：hook / rhythm / voice
 

@@ -14,7 +14,6 @@
 `Bash` 列出：
 - `ls ~/.claude/styles/samples/positive/ | wc -l` → 投喂样本数
 - `ls ~/.claude/styles/samples/negative/ | wc -l` → 反样本数
-- `ls ~/.claude/styles/drafts/ | wc -l` → 草稿数
 - `ls ~/.claude/styles/backups/ | tail -5` → 最近 5 个备份
 - `ls ~/.claude/skills/style-distiller/style-write/results/初版/ | wc -l` → 自写初版数
 - `ls ~/.claude/skills/style-distiller/style-write/results/终版/ | wc -l` → 自写终版数
@@ -181,4 +180,4 @@
 ### 3. 用户要求导出
 - 合并 8 份 profile + persona + 历史到一个文件
 - 文件名：`style-export-{YYYY-MM-DD}.md`
-- 保存到 `~/.claude/styles/drafts/` 或用户指定路径
+- 保存到 `~/.claude/styles/backups/` 或用户指定路径

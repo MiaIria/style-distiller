@@ -58,7 +58,7 @@
 
 ```markdown
 ---
-id: 2026-06-02_001_neg
+id: reject-0602
 source: 抖音/公众号/...
 fed_at: 2026-06-02
 rejection_reason: "词汇油腻/强行煽情"
@@ -128,7 +128,7 @@ severity: high/medium/low
 ```
 🚫 反样本已记录！
 
-📝 ID：2026-06-02_001_neg
+📝 ID：reject-0602
 📂 入库：samples/negative/
 ⚠️ 严重度：{high/medium/low}
 
