@@ -12,18 +12,29 @@
 - `history.md`（最近 30 天）
 
 `Bash` 列出：
-- `ls ~/.claude/styles/samples/positive/ | wc -l` → 正样本数
+- `ls ~/.claude/styles/samples/positive/ | wc -l` → 投喂样本数
 - `ls ~/.claude/styles/samples/negative/ | wc -l` → 反样本数
 - `ls ~/.claude/styles/drafts/ | wc -l` → 草稿数
 - `ls ~/.claude/styles/backups/ | tail -5` → 最近 5 个备份
+- `ls ~/.claude/skills/style-distiller/style-write/results/初版/ | wc -l` → 自写初版数
+- `ls ~/.claude/skills/style-distiller/style-write/results/终版/ | wc -l` → 自写终版数
+
+> **自写样本去重**：同一主题（`{日期}_{题目}` 相同）的初版+终版只算一篇，
+> 优先算终版。最终数量由 `python scripts/profile_stats.py` 自动计算并去重。
 
 ### Step 2：判定当前状态
 
-按 `weights.json` 阈值：
+**总样本 = 投喂样本 + 自写样本（去重后，等权）**
+
+按合计数量：
 - 🔴 冷启动 (0-2)
 - 🟠 萌芽 (3-9)
 - 🟡 学习 (10-29)
 - 🟢 成熟 (≥ 30)
+
+> 如果 `weights.json` 的 `current_state` 与按新逻辑推断的状态不一致（如
+> weights 说萌芽，但合计已到 12 篇=学习），**优先以合计推断的状态为准**，
+> 并在报告里说明"weights 状态已陈旧"。
 
 ### Step 3：汇总呈现
 

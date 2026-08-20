@@ -60,15 +60,22 @@ This correction should override weaker inferred signals.
 
 The profile can be described in stages:
 
-| State | Sample count | Meaning |
+| State | Total sample count | Meaning |
 | --- | --- | --- |
 | cold start | 0-2 | mostly generic baseline |
 | sprout | 3-9 | visible but unstable style |
 | learning | 10-29 | usable style profile |
 | mature | 30+ | stronger style restoration |
 
-Self-written samples have higher value than external liked samples because they
-show how the user actually writes, not only what the user appreciates.
+`Total = positive samples (external liked, fed via /style-feed) + self-written
+samples (under `style-write/results/`, deduped by topic — same title counted
+once, 终版 preferred over 初版 when both exist)`.
+
+Self-written samples are equal in weight but qualitatively different: they
+show how the user actually writes, not only what the user appreciates. When
+the user re-runs `/style-feed` on their own drafts (rather than only on
+external articles), the model can distinguish "what looks good to me" from
+"how I write".
 
 ## Why Feedback Matters
 

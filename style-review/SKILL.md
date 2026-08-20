@@ -42,9 +42,10 @@ Read ~/.claude/skills/style-distiller/style-lib/prompts/review.md
 | 触发条件 | 必须动作 |
 |---------|---------|
 | 状态 🔴 冷启动 | 提示"先 /style-feed 3-5 篇" |
-| 状态 🟠 萌芽 | 末尾建议"继续 /style-feed 到 10 篇" |
+| 状态 🟠 萌芽 | 末尾建议"继续 /style-feed 到 10 篇（投喂+自写合计）" |
 | 状态 🟡 学习 | 末尾建议"试 /style-write 看实际效果" |
 | 状态 🟢 成熟 | 末尾建议"持续使用 + 定期 review" |
+| weights 状态 ≠ 推断状态 | 在报告里标注"weights 状态已陈旧，按合计 N 篇实际为 X" |
 | 某维度 ▱ > 5 | 提示"/style-feed 时重点标该维度" |
 | 反样本 < 3 | 提示"/style-reject 标几个反例" |
 | 档案 30 天未审视 | Append history.md 月度审视 |
@@ -78,12 +79,15 @@ Read ~/.claude/skills/style-distiller/style-lib/prompts/review.md
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 📦 样本库
-  ✓ 正样本：{N} 篇
+  ✓ 投喂样本（外部参考）：{N} 篇
+  ✓ 自写样本（results/，按主题去重）：{M} 篇
+      终版 {K} 篇 + 仅初版 {L} 篇
+  ✓ 合计：{N+M} 篇 ← 用于阶段判定
   ✗ 反样本：{N} 篇
   📅 最近喂入：{N} 天前
   🎯 草稿产出：{N} 篇
 
-🎭 当前状态：{🔴/🟠/🟡/🟢} {中文}
+🎭 当前状态：{🔴/🟠/🟡/🟢} {中文}（基于合计 {N+M}）
 
 {persona.md 的一句话画像}
 
