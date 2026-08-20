@@ -1,9 +1,23 @@
-# 用户个人风格数据 — 绝不入版本控制
-styles/
-
-# macOS
+# OS
 .DS_Store
-
-# Windows
 Thumbs.db
-Desktop.ini
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# 用户个人写作数据（保留 .gitkeep 占位）
+style-write/results/*
+style-write/difference/*
+!style-write/results/.gitkeep
+!style-write/difference/.gitkeep
+
+# 开发笔记
+style-write/plan.md

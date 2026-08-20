@@ -22,7 +22,7 @@ allowed-tools: Read, Write, Edit, Bash
 ## 0️⃣ 第一步：先读协同规则
 
 ```
-Read ~/.claude/skills/style-lib/prompts/coordinate.md
+Read ~/.claude/skills/style-distiller/style-lib/prompts/coordinate.md
 ```
 
 了解 style-feedback 与其他 4 个 skill（feed/write/reject/review）的协同触发条件。
@@ -30,7 +30,7 @@ Read ~/.claude/skills/style-lib/prompts/coordinate.md
 ## 1️⃣ 第二步：读主流程
 
 ```
-Read ~/.claude/skills/style-lib/prompts/feedback.md
+Read ~/.claude/skills/style-distiller/style-lib/prompts/feedback.md
 ```
 
 按 feedback.md 中的流程完整执行。
@@ -115,5 +115,5 @@ Read ~/.claude/skills/style-lib/prompts/feedback.md
 
 ## 共享库引用
 
-- 主流程：`~/.claude/skills/style-lib/prompts/feedback.md`
-- 完整文档：`~/.claude/skills/style-lib/README.md`
+- 主流程：`~/.claude/skills/style-distiller/style-lib/prompts/feedback.md`
+- 完整文档：`~/.claude/skills/style-distiller/style-lib/README.md`
